@@ -11,54 +11,51 @@
 
 / {
 
+	behaviors {
+		hm: homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			label = "homerow mods";
+			#binding-cells = <2>;
+			tapping_term_ms = <200>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
+
 	keymap {
 		compatible = "zmk,keymap";
 		
 		default {
             label = "Qwerty";
-//  _____________________________       _____________________________
-// /  Q  |  W  |  E  |  R  |  T  \     /  Y  |  U  |  I  |  O  |  P  \
-// |  A  |  S  |  D  |  F  |  G  | ___ |  H  |  J  |  K  |  L  |  ;  |
-// |Sft/Z|  X  |  C  |  V  |  B  ||MUT||  N  |  M  |  ,  |  .  |Sft//|
-//         \LAlt/Bspc|  Ctl/SPC  /     \  Num/Del  | Sym/Ent /
-//          ---------------------       --------------------
+
 			bindings = <
-            &kp Q       &kp W   &kp E   &kp R   &kp T                   &kp Y   &kp U   &kp I       &kp O   &kp P
-            &kp A       &kp S   &kp D   &kp F   &kp G                   &kp H   &kp J   &kp K       &kp L   &kp SEMI
-            &mt LSHFT Z &kp X   &kp C   &kp V   &kp B   &kp C_MUTE      &kp N   &kp M   &kp COMMA   &kp DOT &mt RSHFT FSLH
-                        &mt LALT BSPC   &mt LCTRL SPACE                 &lt 1 RET       &lt 2 DEL
+            &kp Q       &kp W      &kp E       &kp R       &kp T                     &kp Y   &kp U       &kp I       &kp O      &kp P
+            &kp A       &hm LALT S &hm LCTRL D &hm LSHFT F &kp G                     &kp H   &hm RSHFT J &hm RCTRL K &HM RALT L &kp SEMI
+            &hm LGUI Z  &kp X      &kp C       &kp V       &kp B     &kp C_MUTE      &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH
+                                           &lt 2 RET &lt 1 SPACE             				 &lt 1 BSPC  &lt 2 DEL
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 		};
 		numbers {
-            label = "Nummies";
-//  _____________________________       _____________________________
-// /  1  |  2  |  3  |  4  |  5  \     /  6  |  7  |  8  |  9  |  0  \
-// | TAB |BTPRV|BTNXT| VOL-| VOL+| ___ |  <  |  v  |  ^  |  >  |  '  |
-// | Sft |BTSL0|BTCLR| MUT |     ||CPS|| HOME| END | PGUP| PGDN| Sft |
-//         \  LAlt   |    Ctl    /     \   Trns    |         /
-//          ---------------------       --------------------
+            label = "Num";
+
 			bindings = <
-            &kp N1      &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-            &kp TAB &bt BT_PRV &bt BT_NXT &kp C_VOL_DN &kp C_VOL_UP &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
-            &kp LSHFT &bt BT_SEL 0 &bt BT_CLR &kp C_MUTE &none &none &kp HOME &kp END &kp PG_UP &kp PG_DN &kp RSHFT
-            &kp LALT &kp LCTRL &trans &none
+            &kp N1      &kp N2       &kp N3     &kp N4       &kp N5                       &kp N6   &kp N7   &kp N8    &kp N9    &kp N0
+            &kp TAB 	  &bt BT_PRV   &bt BT_NXT &kp C_VOL_DN &kp C_VOL_UP                 &kp LEFT &kp DOWN &kp UP    &kp RIGHT &kp SQT
+            &kp LSHFT   &bt BT_SEL 0 &bt BT_CLR &kp C_MUTE   &none            &none       &kp HOME &kp END  &kp PG_UP &kp PG_DN &kp RSHFT
+                                                &kp LALT     &kp LCTRL                    &trans   &none
 			>;
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 		};
 		symbols {
-            label = "Funks";
-//  _____________________________       _____________________________
-// / ESC | F1  | F2  | F3  | F4  \     / USB | BLE |     |  =  |  -  \
-// |     | F5  | F6  | F7  | F8  | ___ |  [  |  ]  |     |  `  |  \  |
-// | Sft | F9  | F10 | F11 | F12 ||   ||     |     |     |     | Sft |
-//         \  LAlt   |    Ctl    /     \           | Trns    /
-//          ---------------------       --------------------
+            label = "Stuff";
+
 			bindings = <
-            &kp ESC &kp F1 &kp F2 &kp F3 &kp F4 &out OUT_USB &out OUT_BLE &none  &kp EQUAL &kp MINUS
-            &none &kp F5 &kp F6 &kp F7 &kp F8 &kp LBKT &kp RBKT &none &kp GRAVE &kp BSLH
-            &kp LSHFT &kp F9 &kp F10 &kp F11 &kp F12 &none &none &none &none &none &kp RSHFT
-            &kp LALT &kp LCTRL &none &trans
+            &kp ESC   &kp F1 &kp F2  &kp F3   &kp F4                 &out OUT_USB &out OUT_BLE &none  &kp EQUAL &kp MINUS
+            &none     &kp F5 &kp F6  &kp F7   &kp F8                 &kp LBKT     &kp RBKT     &none  &kp GRAVE &kp BSLH
+            &kp LSHFT &kp F9 &kp F10 &kp F11  &kp F12       &none    &none        &none        &none  &none     &kp RSHFT
+                                     &kp LALT &kp LCTRL              &none        &trans
 			>;
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
 		};
