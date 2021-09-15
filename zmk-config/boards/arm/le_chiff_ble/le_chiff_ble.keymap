@@ -38,7 +38,7 @@
 				combo_ae {
             timeout-ms = <40>;
             key-positions = <10 2>;
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&kp SINGLE_QUOTE>;
         };
 				combo_ss {
             timeout-ms = <40>;
