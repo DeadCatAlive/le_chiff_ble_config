@@ -60,7 +60,7 @@
 			//    10          11         12          13          14                        15         16          17          18         19
             &kp A       &hm LALT S &hm LCTRL D &hm LSHFT F &kp G                     &kp H      &hm RSHFT J &hm RCTRL K &hm RALT L &kp RET
 			//		20          21         22          23          24        25              26         27          28          29         30	
-            &hm LGUI Y  &kp X      &kp C       &kp V       &kp B     &kp C_MUTE      &kp N      &kp M       &kp COMMA   &kp DOT    &kp FSLH
+            &hm LGUI Y  &kp X      &kp C       &kp V       &kp B     &kp C_MUTE      &kp N      &kp M       &kp COMMA   &kp DOT    &lt 3 FSLH
 
       //                                   31        32                              33         34
                                            &lt 2 RET &lt 1 SPACE             				 &lt 1 BSPC &lt 2 DEL
