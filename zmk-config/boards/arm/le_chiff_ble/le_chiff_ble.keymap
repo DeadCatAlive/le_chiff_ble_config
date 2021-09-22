@@ -5,10 +5,11 @@
  */
 
 #include <behaviors.dtsi>
+#include <langauge_german.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-//test
+
 / {
 
 	behaviors {
@@ -28,22 +29,22 @@
         combo_ue {
             timeout-ms = <40>;
             key-positions = <6 2>;
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp deUE>;
         };
 				combo_oe {
             timeout-ms = <40>;
             key-positions = <8 2>;
-            bindings = <&kp SEMICOLON>;
+            bindings = <&kp deOE>;
         };
 				combo_ae {
             timeout-ms = <40>;
             key-positions = <10 2>;
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&kp deAE>;
         };
 				combo_ss {
             timeout-ms = <40>;
             key-positions = <11 12>;
-            bindings = <&kp MINUS>;
+            bindings = <&kp deESZETT>;
         };
     };
 

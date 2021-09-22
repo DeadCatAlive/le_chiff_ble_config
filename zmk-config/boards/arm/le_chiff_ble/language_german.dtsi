@@ -1,0 +1,65 @@
+/*
+ * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+ * │ ^ │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ ß │ ´ │       │
+ * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+ * │     │ Q │ W │ E │ R │ T │ Z │ U │ I │ O │ P │ Ü │ + │     │
+ * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+ * │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ Ö │ Ä │ # │    │
+ * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+ * │    │ < │ Y │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
+ * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+ * │    │    │    │                        │    │    │    │    │
+ * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+ */
+// Row 1
+#define deCIRCUMFLEX  GRAVE     // ^
+#define deNUMBER_1    NUMBER_1  // 1
+#define deNUMBER_2    NUMBER_2  // 2
+#define deNUMBER_3    NUMBER_3  // 3
+#define deNUMBER_4    NUMBER_4  // 4
+#define deNUMBER_5    NUMBER_5  // 5
+#define deNUMBER_6    NUMBER_6  // 6
+#define deNUMBER_7    NUMBER_7  // 7
+#define deNUMBER_8    NUMBER_8  // 8
+#define deNUMBER_9    NUMBER_9  // 9
+#define deNUMBER_0    NUMBER_0  // 0
+#define deESZETT      MINUS     // ß
+#define deACUTE       EQUAL     // ´
+// Row 2
+#define deQ    Q             // Q
+#define deW    W             // W
+#define deE    E             // E
+#define deR    R             // R
+#define deT    T             // T
+#define deZ    Y             // Z
+#define deU    U             // U
+#define deI    I             // I
+#define deO    O             // O
+#define deP    P             // P
+#define deUE   LEFT_BRACKET  // Ü
+#define dePLUS RIGHT_BRACKET // +
+// Row 3
+#define deA      A            // A
+#define deS      S            // S
+#define deD      D            // D
+#define deF      F            // F
+#define deG      G            // G
+#define deH      H            // H
+#define deJ      J            // J
+#define deK      K            // K
+#define deL      L            // L
+#define deOE     SEMICOLON    // Ö
+#define deAE     SINGLE_QUOTE // Ä
+#define deHASH   NON_US_HASH  // #
+// Row 4
+#define deLESS_THAN NON_US_BACKSLASH // <
+#define deY    Z                     // Y
+#define deX    X                     // X
+#define deC    C                     // C
+#define deV    V                     // V
+#define deB    B                     // B
+#define deN    N                     // N
+#define deM    M                     // M
+#define deCOMMA COMMA                // ,
+#define dePERIOD PERIOD              // .
+#define deMINUS SLASH                // -
