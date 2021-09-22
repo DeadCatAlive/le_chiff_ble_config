@@ -53,13 +53,79 @@
 #define deHASH   NON_US_HASH  // #
 // Row 4
 #define deLESS_THAN NON_US_BACKSLASH // <
-#define deY    Z                     // Y
-#define deX    X                     // X
-#define deC    C                     // C
-#define deV    V                     // V
-#define deB    B                     // B
-#define deN    N                     // N
-#define deM    M                     // M
-#define deCOMMA COMMA                // ,
-#define dePERIOD PERIOD              // .
-#define deMINUS SLASH                // -
+#define deY         Z                // Y
+#define deX         X                // X
+#define deC         C                // C
+#define deV         V                // V
+#define deB         B                // B
+#define deN         N                // N
+#define deM         M                // M
+#define deCOMMA     COMMA            // ,
+#define dePERIOD    PERIOD           // .
+#define deMINUS     SLASH            // -
+
+/* Shifted symbols
+ * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+ * │ ° │ ! │ " │ § │ $ │ % │ & │ / │ ( │ ) │ = │ ? │ ` │       │
+ * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+ * │     │   │   │   │   │   │   │   │   │   │   │   │ * │     │
+ * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+ * │      │   │   │   │   │   │   │   │   │   │   │   │ ' │    │
+ * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+ * │    │ > │   │   │   │   │   │   │   │ ; │ : │ _ │          │
+ * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+ * │    │    │    │                        │    │    │    │    │
+ * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+ */
+// Row 1
+#define deDEGREE            LS(deCIRCUMFLEX)  // °
+#define deEXCLAMATION       LS(deNUMBER_1)    // !
+#define deDOUBLE_QUOTES     LS(deNUMBER_2)    // "
+#define deSECTION           LS(deNUMBER_3)    // §
+#define deDOLLAR            LS(deNUMBER_4)    // $
+#define dePERCENT           LS(deNUMBER_5)    // %
+#define deAMPERSAND         LS(deNUMBER_6)    // &
+#define deSLASH             LS(deNUMBER_7)    // /
+#define deLEFT_PARENTHESIS  LS(deNUMBER_8)    // (
+#define deRIGHT_PARENTHESIS LS(deNUMBER_9)    // )
+#define deEQUAL             LS(deNUMBER_0)    // =
+#define deQUESTION          LS(deNUMBER_SS)   // ?
+#define deGRAVE             LS(deNUMBER_ACUT) // ` (dead)
+// Row 2
+#define deASTERISK          LS(dePLUS)        // *
+// Row 3
+#define deSINGLE_QUOTE      LS(deHASH)        // '
+// Row 4
+#define deGREATER_THAN      LS(deLESS_THAN)   // >
+#define deSEMICOLON         LS(deCOMMA)       // ;
+#define deCOLON             LS(dePERIOD)      // :
+#define deUNDERSCORE        LS(deMINUS)       // _
+
+/* AltGr symbols
+ * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+ * │   │   │ ² │ ³ │   │   │   │ { │ [ │ ] │ } │ \ │   │       │
+ * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+ * │     │ @ │   │ € │   │   │   │   │   │   │   │   │ ~ │     │
+ * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+ * │      │   │   │   │   │   │   │   │   │   │   │   │   │    │
+ * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+ * │    │ | │   │   │   │   │   │   │ µ │   │   │   │          │
+ * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+ * │    │    │    │                        │    │    │    │    │
+ * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+ */
+// Row 1 
+#define deSUPER2        RA(deNUMBER_2)    // ²
+#define deSUPER3        RA(deNUMBER_3)    // ³
+#define deLEFT_BRACE    RA(deNUMBER_7)    // {
+#define deLEFT_BRACKET  RA(deNUMBER_8)    // [
+#define deRIGHT_BRACKET RA(deNUMBER_9)    // ]
+#define deRIGHT_BRACE   RA(deNUMBER_0)    // }
+#define deBACKSLASH     RA(deESZETT)      // (backslash)
+// Row 2
+#define deAT_SIGN       RA(deQ)           // @
+#define deEURO          RA(deE)           // €
+#define deTILDE         RA(dePLUS)        // ~
+// Row 4
+#define dePIPE          RA(deLESS_THAN)   // |
+#define deMICRO         RA(deM)           // µ
