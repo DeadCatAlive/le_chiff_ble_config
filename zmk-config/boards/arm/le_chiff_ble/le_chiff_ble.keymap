@@ -146,7 +146,7 @@
             &hm LGUI Y  &kp X      &kp C       &kp V       &kp B     &kp C_MUTE   &kp N      &kp M       &kp deCOMMA &kp dePERIOD &lt 3 deMINUS
 
       //                                   31        32                              33         34
-                                           &lt 2 RET &lt 1 SPACE             		 &lt 1 DEL &lt 2 BSPC
+                                           &lt 2 RET &lt 1 SPACE             		 &lt 1 BSPC &lt 2 DEL
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
 		};
