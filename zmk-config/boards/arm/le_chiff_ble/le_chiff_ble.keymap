@@ -126,7 +126,7 @@
         };
         combo_F12 {
             timeout-ms = <40>;
-            key-positions = <8 9z>;
+            key-positions = <8 9>;
             bindings = <&kp F12>;
         };
     };
