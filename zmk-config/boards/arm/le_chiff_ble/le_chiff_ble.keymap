@@ -154,9 +154,9 @@
             label = "SYMBOLS";
 
 			bindings = <
-            &kp deGREATER_THAN &kp deRIGHT_BRACKET &kp deRIGHT_BRACE &kp  deRIGHT_PARENTHESIS &kp deBACKSLASH /**/   &kp deCIRCUMFLEX  &trans &trans &trans &kp dePLUS 
-            &kp deLESS_THAN    &kp deLEFT_BRACKET  &kp deLEFT_BRACE  &kp  deLEFT_PARENTHESIS  &kp deSLASH     /**/   &kp deACUTE       &trans &trans &trans &kp deHASH 
-            &kp dePIPE         &kp dePERCENT       &kp deDOLLAR      &kp  deAT_SIGN           &kp deAMPERSAND &trans &kp deEXCLAMATION &trans &trans &trans &trans     
+            &kp deGREATER_THAN &kp deRIGHT_BRACKET &kp deRIGHT_BRACE &kp  deRIGHT_PARENTHESIS &kp deBACKSLASH /**/   &kp deCIRCUMFLEX  &kp deEQUAL &trans &trans &kp dePLUS 
+            &kp deLESS_THAN    &kp deLEFT_BRACKET  &kp deLEFT_BRACE  &kp  deLEFT_PARENTHESIS  &kp deSLASH     /**/   &kp deACUTE       &trans      &trans &trans &kp deHASH 
+            &kp dePIPE         &kp dePERCENT       &kp deDOLLAR      &kp  deAT_SIGN           &kp deAMPERSAND &trans &kp deEXCLAMATION &trans      &trans &trans &kp deDOUBLE_QUOTES     
                                                                      &trans                   &trans          /**/   &trans            &trans
 			>;
 			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
