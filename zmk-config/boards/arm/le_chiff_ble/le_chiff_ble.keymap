@@ -19,7 +19,7 @@
     quick_tap_ms = <200>;
 };
 
-	behaviors {
+/	behaviors {
 		hm: homerow_mods {
 			compatible = "zmk,behavior-hold-tap";
 			label = "homerow mods";
