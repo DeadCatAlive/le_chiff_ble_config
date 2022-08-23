@@ -5,6 +5,7 @@ env:
 
 on:
   workflow_dispatch:
+    paths:
       - ".github/workflows/build.yml"
       - "zmk-config/**"
   push:
